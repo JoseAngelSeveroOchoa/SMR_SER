@@ -1,0 +1,13 @@
+site_name: SMR-SERVICIOS_EN_RED
+nav:
+  - Home: index.md
+  - UD1_DHCP: UD1_DHCP.md
+  - About: about.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

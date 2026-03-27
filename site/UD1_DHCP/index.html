@@ -1,0 +1,971 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>UD1_DHCP - SMR-SERVICIOS_EN_RED</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-servicio-dhcp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SMR-SERVICIOS_EN_RED" class="md-header__button md-logo" aria-label="SMR-SERVICIOS_EN_RED" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SMR-SERVICIOS_EN_RED
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD1_DHCP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SMR-SERVICIOS_EN_RED" class="md-nav__button md-logo" aria-label="SMR-SERVICIOS_EN_RED" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SMR-SERVICIOS_EN_RED
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1_DHCP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1_DHCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ventajas-del-uso-del-servicio-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ventajas del uso del servicio DHCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-proceso-dora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama del proceso DORA:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-intervalos-exclusiones-concesiones-y-reservas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Intervalos, exclusiones, concesiones y reservas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Intervalos, exclusiones, concesiones y reservas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intervalos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intervalos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclusiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concesiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reservas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-configuraciones-adicionales-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Configuraciones adicionales del servicio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Configuraciones adicionales del servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-option-subnet-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. option subnet-mask
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-option-routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. option routers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-option-domain-name-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. option domain-name-servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otras-opciones-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otras opciones útiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-problemas-del-servicio-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Problemas del servicio DHCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Problemas del servicio DHCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ataques-dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataques DoS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP Spoofing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas-de-seguridad-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medidas de seguridad recomendadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-conflictos-de-direcciones-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Conflictos de direcciones IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ventajas-del-uso-del-servicio-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ventajas del uso del servicio DHCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-proceso-dora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama del proceso DORA:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-intervalos-exclusiones-concesiones-y-reservas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Intervalos, exclusiones, concesiones y reservas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Intervalos, exclusiones, concesiones y reservas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intervalos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intervalos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclusiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concesiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reservas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-configuraciones-adicionales-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Configuraciones adicionales del servicio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Configuraciones adicionales del servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-option-subnet-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. option subnet-mask
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-option-routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. option routers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-option-domain-name-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. option domain-name-servers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otras-opciones-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otras opciones útiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-problemas-del-servicio-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Problemas del servicio DHCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Problemas del servicio DHCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ataques-dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ataques DoS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DHCP Spoofing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas-de-seguridad-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medidas de seguridad recomendadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-conflictos-de-direcciones-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Conflictos de direcciones IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unidad-servicio-dhcp">Unidad: Servicio DHCP</h1>
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>El <strong>DHCP (Dynamic Host Configuration Protocol)</strong> permite que los equipos de una red obtengan automáticamente una configuración completa: dirección IP, máscara de subred, puerta de enlace, servidores DNS y más.</p>
+<p>A nivel técnico, DHCP utiliza los puertos <strong>UDP 67 (servidor)</strong> y <strong>UDP 68 (cliente)</strong> para intercambiar los mensajes iniciales de configuración. Como los clientes aún no tienen una dirección IP válida al iniciar el proceso, estos mensajes se envían mediante <strong>broadcast</strong>.</p>
+<p>Además del protocolo tradicional para IPv4, existe <strong>DHCPv6</strong>, una variante diseñada específicamente para redes modernas con IPv6.</p>
+<p>Sin DHCP, el administrador debe asignar manualmente las direcciones IP de cada dispositivo (ordenadores, servidores, impresoras, cámaras IP…), lo que resulta lento, repetitivo y propenso a errores.</p>
+<hr />
+<h2 id="2-ventajas-del-uso-del-servicio-dhcp">2. Ventajas del uso del servicio DHCP</h2>
+<ul>
+<li><strong>Administración centralizada:</strong> solo es necesario editar la configuración del servidor.</li>
+<li><strong>Evita errores y conflictos IP:</strong> previene duplicados o direcciones incorrectas.</li>
+<li><strong>Ahorro de tiempo:</strong> los clientes reciben la configuración automáticamente.</li>
+<li><strong>Simplifica la gestión:</strong> todo se controla desde un único punto.</li>
+<li><strong>Flexible en redes grandes:</strong> permite modificar rangos de IP o la topología sin tocar cada dispositivo.</li>
+<li><strong>Facilita la movilidad de equipos:</strong> los dispositivos portátiles pueden cambiar de red y obtener configuración automáticamente.</li>
+</ul>
+<hr />
+<h2 id="3-funcionamiento">3. Funcionamiento</h2>
+<p>El proceso de asignación de IP entre cliente y servidor sigue cuatro pasos básicos conocidos como <strong>DORA</strong>:</p>
+<ol>
+<li><strong>Discovery:</strong> el cliente solicita una configuración de red usando broadcast.</li>
+<li><strong>Offer:</strong> el servidor ofrece una dirección IP disponible.</li>
+<li><strong>Request:</strong> el cliente acepta la oferta y la solicita formalmente.</li>
+<li><strong>Acknowledge (ACK):</strong> el servidor confirma la concesión o la rechaza (NACK).</li>
+</ol>
+<h3 id="diagrama-del-proceso-dora">Diagrama del proceso DORA:</h3>
+<p><img alt="DORA -&gt; Discovery-Offer-Request-Ack" src="../images/dora.png" /></p>
+<p>Este proceso utiliza <strong>UDP</strong>, un protocolo no orientado a conexión, ya que el cliente aún no tiene IP ni puede establecer comunicación unicast.</p>
+<hr />
+<h2 id="4-intervalos-exclusiones-concesiones-y-reservas">4. Intervalos, exclusiones, concesiones y reservas</h2>
+<h3 id="intervalos">Intervalos</h3>
+<p>Son los rangos de direcciones IP que el servidor puede asignar.</p>
+<div class="highlight"><pre><span></span><code>subnet 239.252.197.0 netmask 255.255.255.0 {
+  range 239.252.197.10 239.252.197.107;
+  range 239.252.197.113 239.252.197.250;
+}
+</code></pre></div>
+<h3 id="exclusiones">Exclusiones</h3>
+<p>Son direcciones que <strong>no</strong> se asignan dinámicamente, como:
+- IP del router.
+- IP de la impresora.</p>
+<h3 id="concesiones">Concesiones</h3>
+<p>Consisten en la asignación temporal de una IP a un cliente.</p>
+<h3 id="reservas">Reservas</h3>
+<p>Permiten asignar siempre la misma IP a un dispositivo concreto (identificado por su MAC). Son útiles para:
+- Servidores.
+- Impresoras.
+- Dispositivos que requieren IP fija.</p>
+<div class="highlight"><pre><span></span><code>host iesserver {
+  hardware ethernet 08:00:2b:4c:59:23;
+  fixed-address 140.220.191.1;
+}
+</code></pre></div>
+<hr />
+<h2 id="5-configuraciones-adicionales-del-servicio">5. Configuraciones adicionales del servicio</h2>
+<p>DHCP permite añadir parámetros extra:</p>
+<h3 id="51-option-subnet-mask">5.1. option subnet-mask</h3>
+<p>Define la máscara de subred.</p>
+<h3 id="52-option-routers">5.2. option routers</h3>
+<p>Indica la puerta de enlace predeterminada.</p>
+<h3 id="53-option-domain-name-servers">5.3. option domain-name-servers</h3>
+<p>Define los servidores DNS que usará el cliente.</p>
+<h3 id="otras-opciones-utiles">Otras opciones útiles</h3>
+<ul>
+<li><strong>option domain-name</strong> → establece el nombre del dominio local.</li>
+<li><strong>option broadcast-address</strong> → define la dirección broadcast de la red.</li>
+<li><strong>option ntp-servers</strong> → especifica servidores NTP para sincronización horaria.</li>
+</ul>
+<hr />
+<h2 id="6-problemas-del-servicio-dhcp">6. Problemas del servicio DHCP</h2>
+<h3 id="ataques-dos">Ataques DoS</h3>
+<p>Un atacante puede saturar al servidor enviando múltiples solicitudes.</p>
+<h3 id="dhcp-spoofing">DHCP Spoofing</h3>
+<p>Un atacante suplanta al servidor DHCP legítimo y proporciona configuraciones falsas.</p>
+<h3 id="medidas-de-seguridad-recomendadas">Medidas de seguridad recomendadas</h3>
+<ul>
+<li><strong>DHCP Snooping:</strong> evita servidores DHCP falsos en la red.</li>
+<li><strong>Filtrado por MAC:</strong> útil en redes pequeñas para controlar dispositivos permitidos.</li>
+<li><strong>VLANs:</strong> segmentan la red y mejoran la seguridad.</li>
+</ul>
+<h3 id="61-conflictos-de-direcciones-ip">6.1. Conflictos de direcciones IP</h3>
+<p>Ocurren cuando:
+- El archivo de configuración está mal definido.
+- Un cliente fija manualmente una IP dentro del rango dinámico.</p>
+<p>Estos conflictos provocan fallos de comunicación y deben evitarse mediante una correcta planificación.</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
