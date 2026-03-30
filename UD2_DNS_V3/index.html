@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../UD1_DHCP/">
+        <link rel="prev" href="../UD2_DNS_V2/">
       
       
-        <link rel="next" href="../UD2_DNS_V2/">
+        <link rel="next" href="../about/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>UD2_DNS - SMR-SERVICIOS_EN_RED</title>
+        <title>UD2_DNS_V3 - SMR-SERVICIOS_EN_RED</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ut2_1-servicio-dns" class="md-skip">
+        <a href="#ud2-servicio-dns" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD2_DNS
+              UD2_DNS_V3
             
           </span>
         </div>
@@ -255,37 +255,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UD2_DNS
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../UD2_DNS/" class="md-nav__link">
         
   
   
@@ -301,485 +274,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduccion-al-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introducción al DNS
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introducción al DNS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nombres-de-dominio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nombres de dominio
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nombres-de-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nombres de host
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hosts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hosts
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-de-servidores-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuración de servidores DNS
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuración de servidores DNS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archivo-hosts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Archivo hosts
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#historia-del-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Historia del DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conceptos-basicos-de-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conceptos básicos de DNS
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conceptos básicos de DNS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#base-de-datos-distribuida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Base de datos distribuida
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ficheros-de-zona" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ficheros de zona
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proceso-de-resolucion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proceso de resolución
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubicacion-de-zonas-en-linux-bind9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ubicación de zonas en Linux (bind9)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-de-zonas-en-bind9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuración de zonas en bind9
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contenido-de-un-archivo-de-zona-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contenido de un archivo de zona DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jerarquia-del-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jerarquía del DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#servidores-raiz-y-tld" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Servidores raíz y TLD
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fqdn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FQDN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-resolucion-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejemplo de resolución DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proceso-de-resolucion-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proceso de resolución DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuraciones-tipicas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuraciones típicas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-peticiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de peticiones
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de peticiones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recursivas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recursivas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iterativas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Iterativas
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-busqueda-wwwyahoocom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejemplo búsqueda www.yahoo.com
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-registros-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de registros DNS
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de registros DNS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-y-soa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A y SOA
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ns-y-mx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NS y MX
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srv-y-cname" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SRV y CNAME
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#txt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TXT
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mas-tipos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Más tipos
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reenviadores-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reenviadores DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icann" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ICANN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iana" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        IANA
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registradores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registradores
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operadores-de-root-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Operadores de root servers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dns-invertido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DNS invertido
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#servidores-maestros-y-esclavos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Servidores maestros y esclavos
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -815,10 +309,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../UD2_DNS_V3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2_DNS_V3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -834,6 +355,376 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos básicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Conceptos básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dominio-y-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Dominio y host
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Host
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-fqdn-fully-qualified-domain-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. FQDN (Fully Qualified Domain Name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcionamiento-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funcionamiento del DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Funcionamiento del DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-proceso-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Proceso de resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tipos-de-consultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Tipos de consultas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Tipos de consultas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultas-recursivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultas recursivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultas-iterativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultas iterativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jerarquia-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Jerarquía del DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-servidores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Servidores DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Servidores DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-tipos-de-servidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Tipos de servidores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-servidores-maestro-y-esclavo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Servidores maestro y esclavo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-registros-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Registros DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-zonas-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Zonas DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Zonas DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-archivos-de-configuracion-en-linux-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. Archivos de configuración en Linux (bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-configuracion-basica-del-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Configuración básica del cliente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Configuración básica del cliente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-archivo-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Archivo hosts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-dns-inverso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. DNS inverso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-reenviadores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Reenviadores DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-configuraciones-tipicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Configuraciones típicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-organizaciones-relacionadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Organizaciones relacionadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Organizaciones relacionadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-icann" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1. ICANN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-iana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2. IANA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -892,22 +783,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-al-dns" class="md-nav__link">
+  <a href="#1-introduccion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introducción al DNS
+        1. Introducción
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introducción al DNS">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos básicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Conceptos básicos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nombres-de-dominio" class="md-nav__link">
+  <a href="#21-dominio-y-host" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nombres de dominio
+        2.1. Dominio y host
       
     </span>
   </a>
@@ -915,10 +817,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nombres-de-host" class="md-nav__link">
+  <a href="#22-host" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Nombres de host
+        2.2. Host
       
     </span>
   </a>
@@ -926,10 +828,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hosts" class="md-nav__link">
+  <a href="#23-fqdn-fully-qualified-domain-name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hosts
+        2.3. FQDN (Fully Qualified Domain Name)
       
     </span>
   </a>
@@ -942,22 +844,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-de-servidores-dns" class="md-nav__link">
+  <a href="#3-funcionamiento-del-dns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuración de servidores DNS
+        3. Funcionamiento del DNS
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuración de servidores DNS">
+    <nav class="md-nav" aria-label="3. Funcionamiento del DNS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
+  <a href="#31-proceso-de-resolucion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Windows
+        3.1. Proceso de resolución
       
     </span>
   </a>
@@ -965,10 +867,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
+  <a href="#32-tipos-de-consultas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux
+        3.2. Tipos de consultas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Tipos de consultas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consultas-recursivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultas recursivas
       
     </span>
   </a>
@@ -976,10 +890,65 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#archivo-hosts" class="md-nav__link">
+  <a href="#consultas-iterativas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivo hosts
+        Consultas iterativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jerarquia-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Jerarquía del DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-servidores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Servidores DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Servidores DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-tipos-de-servidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Tipos de servidores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-servidores-maestro-y-esclavo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Servidores maestro y esclavo
       
     </span>
   </a>
@@ -992,10 +961,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#historia-del-dns" class="md-nav__link">
+  <a href="#6-registros-dns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Historia del DNS
+        6. Registros DNS
       
     </span>
   </a>
@@ -1003,55 +972,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conceptos-basicos-de-dns" class="md-nav__link">
+  <a href="#7-zonas-dns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conceptos básicos de DNS
+        7. Zonas DNS
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Conceptos básicos de DNS">
+    <nav class="md-nav" aria-label="7. Zonas DNS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#base-de-datos-distribuida" class="md-nav__link">
+  <a href="#71-archivos-de-configuracion-en-linux-bind9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Base de datos distribuida
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ficheros-de-zona" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ficheros de zona
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proceso-de-resolucion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proceso de resolución
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubicacion-de-zonas-en-linux-bind9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ubicación de zonas en Linux (bind9)
+        7.1. Archivos de configuración en Linux (bind9)
       
     </span>
   </a>
@@ -1064,110 +1000,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-de-zonas-en-bind9" class="md-nav__link">
+  <a href="#8-configuracion-basica-del-cliente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuración de zonas en bind9
+        8. Configuración básica del cliente
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contenido-de-un-archivo-de-zona-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contenido de un archivo de zona DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jerarquia-del-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jerarquía del DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#servidores-raiz-y-tld" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Servidores raíz y TLD
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fqdn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        FQDN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-resolucion-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejemplo de resolución DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proceso-de-resolucion-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proceso de resolución DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuraciones-tipicas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuraciones típicas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-peticiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de peticiones
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de peticiones">
+    <nav class="md-nav" aria-label="8. Configuración básica del cliente">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recursivas" class="md-nav__link">
+  <a href="#81-windows" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recursivas
+        8.1. Windows
       
     </span>
   </a>
@@ -1175,10 +1023,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#iterativas" class="md-nav__link">
+  <a href="#82-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterativas
+        8.2. Linux
       
     </span>
   </a>
@@ -1191,10 +1039,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-busqueda-wwwyahoocom" class="md-nav__link">
+  <a href="#9-archivo-hosts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo búsqueda www.yahoo.com
+        9. Archivo hosts
       
     </span>
   </a>
@@ -1202,22 +1050,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipos-de-registros-dns" class="md-nav__link">
+  <a href="#10-dns-inverso" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tipos de registros DNS
+        10. DNS inverso
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tipos de registros DNS">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-reenviadores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Reenviadores DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-configuraciones-tipicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Configuraciones típicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-organizaciones-relacionadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Organizaciones relacionadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Organizaciones relacionadas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-y-soa" class="md-nav__link">
+  <a href="#131-icann" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A y SOA
+        13.1. ICANN
       
     </span>
   </a>
@@ -1225,43 +1106,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ns-y-mx" class="md-nav__link">
+  <a href="#132-iana" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NS y MX
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#srv-y-cname" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SRV y CNAME
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#txt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TXT
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mas-tipos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Más tipos
+        13.2. IANA
       
     </span>
   </a>
@@ -1274,76 +1122,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reenviadores-dns" class="md-nav__link">
+  <a href="#14-resumen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reenviadores DNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icann" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ICANN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iana" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        IANA
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registradores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registradores
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operadores-de-root-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Operadores de root servers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dns-invertido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DNS invertido
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#servidores-maestros-y-esclavos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Servidores maestros y esclavos
+        14. Resumen
       
     </span>
   </a>
@@ -1367,198 +1149,206 @@
 
 
 
-<h1 id="ut2_1-servicio-dns">UT2_1 – Servicio DNS</h1>
-<h2 id="introduccion-al-dns">Introducción al DNS</h2>
-<h3 id="nombres-de-dominio">Nombres de dominio</h3>
-<p>Ejemplos: <code>.org</code>, <code>.net</code>, <code>qualitypixels.net</code>, <code>google.com</code></p>
-<h3 id="nombres-de-host">Nombres de host</h3>
-<p>Ejemplos: <code>pc1</code>, <code>a112</code>, <code>impresora1</code>, etc.</p>
-<h3 id="hosts">Hosts</h3>
-<p>Un host es un ordenador, impresora, router, servidor, etc.<br />
-Cada host tiene un nombre de equipo y al menos una dirección IP.</p>
+<h1 id="ud2-servicio-dns">UD2 – Servicio DNS</h1>
 <hr />
-<h2 id="configuracion-de-servidores-dns">Configuración de servidores DNS</h2>
-<h3 id="windows">Windows</h3>
-<div class="highlight"><pre><span></span><code>ipconfig /all
-</code></pre></div>
-<h3 id="linux">Linux</h3>
-<div class="highlight"><pre><span></span><code>cat /etc/resolv.conf
-</code></pre></div>
-<h3 id="archivo-hosts">Archivo hosts</h3>
-<p>Antes del DNS (1971–72) se usaba un fichero local <code>hosts.txt</code>.
-Ubicación:
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>El DNS (Domain Name System) es un sistema que permite traducir nombres de dominio a direcciones IP, facilitando la comunicación entre dispositivos en una red.</p>
+<p>Por ejemplo, en lugar de acceder a un servidor mediante una dirección IP como <code>142.250.184.78</code>, los usuarios pueden utilizar un nombre más fácil de recordar como <code>google.com</code>.</p>
+<p>El DNS es un sistema distribuido y jerárquico que funciona a nivel global.</p>
+<hr />
+<h2 id="2-conceptos-basicos">2. Conceptos básicos</h2>
+<h3 id="21-dominio-y-host">2.1. Dominio y host</h3>
+<p>Un dominio es un nombre que identifica una organización o entidad dentro de Internet, como <code>google.com</code>.</p>
+<p>Un host es un dispositivo concreto dentro de ese dominio, como:
+- <code>www</code>
+- <code>mail</code>
+- <code>ftp</code></p>
+<p>La combinación de ambos forma un nombre completo.</p>
+<hr />
+<h3 id="22-host">2.2. Host</h3>
+<p>Un host es cualquier dispositivo conectado a una red:
+- Ordenadores
+- Servidores
+- Impresoras
+- Routers</p>
+<p>Cada host dispone de:
+- Un nombre
+- Una dirección IP</p>
+<hr />
+<h3 id="23-fqdn-fully-qualified-domain-name">2.3. FQDN (Fully Qualified Domain Name)</h3>
+<p>Es el nombre completo de un host dentro del sistema DNS.</p>
+<p>Ejemplos:</p>
+<p>www.google.com
+.
+mail.yahoo.com.
+smtp.severoochoa.com.</p>
+<p>El punto final (<code>.</code>) representa la raíz del sistema DNS.</p>
+<hr />
+<h2 id="3-funcionamiento-del-dns">3. Funcionamiento del DNS</h2>
+<p>El proceso de resolución de nombres permite obtener la dirección IP asociada a un dominio.</p>
+<h3 id="31-proceso-de-resolucion">3.1. Proceso de resolución</h3>
+<ol>
+<li>El cliente consulta su memoria caché.</li>
+<li>Si no encuentra la respuesta, consulta a su servidor DNS local.</li>
+<li>El servidor DNS local consulta a un servidor raíz.</li>
+<li>El servidor raíz indica el servidor del dominio de nivel superior (TLD).</li>
+<li>El servidor TLD indica el servidor autoritativo.</li>
+<li>El servidor autoritativo devuelve la dirección IP.</li>
+<li>La respuesta se almacena en caché.</li>
+</ol>
+<hr />
+<h3 id="32-tipos-de-consultas">3.2. Tipos de consultas</h3>
+<h4 id="consultas-recursivas">Consultas recursivas</h4>
+<p>El cliente solicita al servidor DNS que resuelva completamente el nombre.</p>
+<h4 id="consultas-iterativas">Consultas iterativas</h4>
+<p>El servidor DNS responde con la mejor información disponible y puede redirigir a otros servidores.</p>
+<hr />
+<h2 id="4-jerarquia-del-dns">4. Jerarquía del DNS</h2>
+<p>El DNS está organizado en forma de árbol jerárquico:</p>
+<p>. (root)
+└── .com
+└── google.com
+└── www</p>
+<p>Niveles:
+- Raíz (.)
+- Dominios de nivel superior (TLD): <code>.com</code>, <code>.org</code>, <code>.es</code>
+- Dominios
+- Subdominios</p>
+<hr />
+<h2 id="5-servidores-dns">5. Servidores DNS</h2>
+<h3 id="51-tipos-de-servidores">5.1. Tipos de servidores</h3>
+<ul>
+<li>Servidores raíz (root servers)</li>
+<li>Servidores TLD</li>
+<li>Servidores autoritativos</li>
+<li>Servidores DNS locales (resolvers)</li>
+</ul>
+<hr />
+<h3 id="52-servidores-maestro-y-esclavo">5.2. Servidores maestro y esclavo</h3>
+<p>Servidor maestro (master):
+- Contiene la información original
+- Permite modificaciones</p>
+<p>Servidor esclavo (slave):
+- Copia del servidor maestro
+- Solo lectura
+- Se sincroniza automáticamente</p>
+<hr />
+<h2 id="6-registros-dns">6. Registros DNS</h2>
+<p>Los registros DNS almacenan la información necesaria para la resolución de nombres.</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Asocia un nombre a una dirección IPv4</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>Asocia un nombre a una dirección IPv6</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>Define un alias</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>Indica servidores de correo</td>
+</tr>
+<tr>
+<td>NS</td>
+<td>Define servidores DNS autoritativos</td>
+</tr>
+<tr>
+<td>PTR</td>
+<td>Resolución inversa (IP a nombre)</td>
+</tr>
+<tr>
+<td>SOA</td>
+<td>Información principal de la zona</td>
+</tr>
+<tr>
+<td>TXT</td>
+<td>Información adicional o verificación</td>
+</tr>
+<tr>
+<td>SRV</td>
+<td>Define servicios y puertos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-zonas-dns">7. Zonas DNS</h2>
+<p>Una zona DNS es una parte del espacio de nombres gestionada por un servidor DNS.</p>
+<p>Contiene los registros asociados a un dominio.</p>
+<h3 id="71-archivos-de-configuracion-en-linux-bind9">7.1. Archivos de configuración en Linux (bind9)</h3>
+<p>Archivo principal:</p>
+<p>/etc/bind/named.conf.local</p>
+<p>Ejemplo de definición de zona:</p>
+<p>zone "oc.se" {
+type master;
+file "/var/lib/bind/db.oc.se";
+};</p>
+<p>Archivos de zona:</p>
+<p>/var/lib/bind/</p>
+<hr />
+<h2 id="8-configuracion-basica-del-cliente">8. Configuración básica del cliente</h2>
+<h3 id="81-windows">8.1. Windows</h3>
+<p>ipconfig /all</p>
+<h3 id="82-linux">8.2. Linux</h3>
+<p>cat /etc/resolv.conf</p>
+<hr />
+<h2 id="9-archivo-hosts">9. Archivo hosts</h2>
+<p>Antes de la aparición del DNS se utilizaba un archivo local llamado <code>hosts.txt</code>.</p>
+<p>Ubicación:
 - Linux: <code>/etc/hosts</code>
 - Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<p>El sistema operativo consulta primero este archivo antes de usar DNS.</p>
 <hr />
-<h2 id="historia-del-dns">Historia del DNS</h2>
+<h2 id="10-dns-inverso">10. DNS inverso</h2>
+<p>El DNS inverso permite obtener el nombre de dominio a partir de una dirección IP.</p>
+<p>Utiliza:
+- Dominio: <code>in-addr.arpa</code>
+- Registros: PTR</p>
+<p>Ejemplo:</p>
+<p>80.58.61.250 → www.somtic.net</p>
+<hr />
+<h2 id="11-reenviadores-dns">11. Reenviadores DNS</h2>
+<p>Los reenviadores son servidores DNS que se encargan de reenviar consultas a otros servidores externos.</p>
+<p>Funciones:
+- Reducir tráfico
+- Mejorar tiempos de respuesta mediante caché
+- Centralizar consultas externas</p>
+<hr />
+<h2 id="12-configuraciones-tipicas">12. Configuraciones típicas</h2>
 <ul>
-<li><strong>1971–1972</strong>: uso de <code>hosts.txt</code></li>
-<li><strong>1985</strong>: primera versión de DNS</li>
-<li><strong>Actualidad</strong>: DNS es una base de datos distribuida</li>
+<li>Uso de DNS del propio dominio</li>
+<li>Uso de DNS del proveedor de Internet (ISP)</li>
+<li>Uso de servidor DNS como caché</li>
 </ul>
 <hr />
-<h2 id="conceptos-basicos-de-dns">Conceptos básicos de DNS</h2>
-<h3 id="base-de-datos-distribuida">Base de datos distribuida</h3>
-<p>DNS mantiene una base de datos distribuida de nombres e IPs.</p>
-<h3 id="ficheros-de-zona">Ficheros de zona</h3>
-<p>Las zonas contienen los registros DNS del dominio.</p>
-<h3 id="proceso-de-resolucion">Proceso de resolución</h3>
-<p>El servidor DNS consulta primero sus ficheros de zona.</p>
-<h3 id="ubicacion-de-zonas-en-linux-bind9">Ubicación de zonas en Linux (bind9)</h3>
-<p>Archivo: <code>/etc/bind/named.conf.local</code></p>
+<h2 id="13-organizaciones-relacionadas">13. Organizaciones relacionadas</h2>
+<h3 id="131-icann">13.1. ICANN</h3>
+<p>Organización encargada de:
+- Gestionar el sistema de nombres de dominio
+- Asignar dominios
+- Acreditar registradores</p>
+<h3 id="132-iana">13.2. IANA</h3>
+<p>Responsable de:
+- Gestionar la zona raíz
+- Asignar direcciones IP y nombres</p>
 <hr />
-<h2 id="configuracion-de-zonas-en-bind9">Configuración de zonas en bind9</h2>
-<p>Archivo: <code>/etc/bind/named.conf.local</code>
-Ejemplo:
-<div class="highlight"><pre><span></span><code>zone &quot;oc.se&quot; {
-  type master;
-  file &quot;/var/lib/bind/db.oc.se&quot;;
-};
-</code></pre></div>
-Archivos: <code>/var/lib/bind/</code></p>
-<hr />
-<h2 id="contenido-de-un-archivo-de-zona-dns">Contenido de un archivo de zona DNS</h2>
-<ul>
-<li><strong>SOA</strong>: registro principal de la zona</li>
-<li><strong>NS</strong>: servidores autoritativos</li>
-<li><strong>A</strong>: nombre ↔ IP</li>
-<li><strong>CNAME</strong>: alias</li>
-<li><strong>PTR</strong>: resolución inversa</li>
-</ul>
-<hr />
-<h2 id="jerarquia-del-dns">Jerarquía del DNS</h2>
-<ul>
-<li><strong>Raíz "."</strong>: gestionada por root servers</li>
-<li><strong>TLD</strong>: <code>.com</code>, <code>.edu</code>, <code>.net</code>, <code>.org</code>, <code>.es</code>...</li>
-<li><strong>Dominios y subdominios</strong>: <code>yahoo.com</code>, <code>instagram.com</code></li>
-</ul>
-<hr />
-<h2 id="servidores-raiz-y-tld">Servidores raíz y TLD</h2>
-<ol>
-<li>Root servers → conocen a los TLD</li>
-<li>Servidores TLD → conocen servidores autoritativos</li>
-<li>Lista: https://www.iana.org/domains/root/db</li>
-</ol>
-<hr />
-<h2 id="fqdn">FQDN</h2>
-<p>Ejemplos:
-- <code>www.yahoo.com.</code>
-- <code>mail.google.com.</code>
-- <code>smtp.severoochoa.com.</code></p>
-<hr />
-<h2 id="ejemplo-de-resolucion-dns">Ejemplo de resolución DNS</h2>
-<ol>
-<li>Root servers indican TLD <code>.com</code></li>
-<li>TLD <code>.com</code> indica servidor autoritativo</li>
-<li>Autoritativo devuelve la IP</li>
-</ol>
-<hr />
-<h2 id="proceso-de-resolucion-dns">Proceso de resolución DNS</h2>
-<ul>
-<li>Cliente DNS: mantiene caché</li>
-<li>Servidor DNS local: búsqueda recursiva</li>
-<li>Root &amp; TLD: indican servidores autoritativos</li>
-<li>Autoritativo: respuesta final</li>
-</ul>
-<hr />
-<h2 id="configuraciones-tipicas">Configuraciones típicas</h2>
-<ol>
-<li>DNS del mismo dominio</li>
-<li>DNS del ISP</li>
-<li>DNS como caché</li>
-</ol>
-<hr />
-<h2 id="tipos-de-peticiones">Tipos de peticiones</h2>
-<h3 id="recursivas">Recursivas</h3>
-<p>El cliente pide resolución completa.</p>
-<h3 id="iterativas">Iterativas</h3>
-<p>El servidor da info parcial o delega.</p>
-<hr />
-<h2 id="ejemplo-busqueda-wwwyahoocom">Ejemplo búsqueda www.yahoo.com</h2>
-<ol>
-<li>Cliente consulta caché</li>
-<li>DNS ISP consulta root</li>
-<li>Root indica <code>.com</code></li>
-<li><code>.com</code> indica autoritativo</li>
-<li>Autoritativo da IP</li>
-<li>Caché se actualiza</li>
-</ol>
-<hr />
-<h2 id="tipos-de-registros-dns">Tipos de registros DNS</h2>
-<h3 id="a-y-soa">A y SOA</h3>
-<ul>
-<li>A: nombre ↔ IP</li>
-<li>AAAA: IPv6</li>
-<li>SOA: parámetros de zona</li>
-</ul>
-<h3 id="ns-y-mx">NS y MX</h3>
-<ul>
-<li>NS: servidor autoritativo</li>
-<li>MX: servidor de correo</li>
-</ul>
-<h3 id="srv-y-cname">SRV y CNAME</h3>
-<ul>
-<li>SRV: servicios y puertos</li>
-<li>CNAME: alias</li>
-</ul>
-<h3 id="txt">TXT</h3>
-<ul>
-<li>Texto asociado al dominio</li>
-<li>Verificaciones</li>
-<li>Ejemplo: google-site-verification</li>
-</ul>
-<h3 id="mas-tipos">Más tipos</h3>
-<p>https://es.wikipedia.org/wiki/Anexo:Tipos_de_registros_DNS</p>
-<hr />
-<h2 id="reenviadores-dns">Reenviadores DNS</h2>
-<ul>
-<li>Reenvían consultas externas</li>
-<li>Mantienen caché</li>
-<li>Pueden ser autoridad local</li>
-</ul>
-<hr />
-<h2 id="icann">ICANN</h2>
-<ul>
-<li>Organización sin ánimo de lucro</li>
-<li>Gestiona IPs, identificadores, DNS, root servers</li>
-<li>Acredita registradores</li>
-</ul>
-<hr />
-<h2 id="iana">IANA</h2>
-<ul>
-<li>Mantiene zonas raíz</li>
-<li>Asigna espacio de nombres</li>
-<li>Supervisa operaciones DNS</li>
-</ul>
-<hr />
-<h2 id="registradores">Registradores</h2>
-<ul>
-<li>Actualizan info en servidores TLD</li>
-<li>Acreditados por ICANN</li>
-</ul>
-<hr />
-<h2 id="operadores-de-root-servers">Operadores de root servers</h2>
-<ul>
-<li>12 operadores</li>
-<li>13 root servers</li>
-<li>Info: https://root-servers.org/</li>
-</ul>
-<hr />
-<h2 id="dns-invertido">DNS invertido</h2>
-<ul>
-<li>Usa dominio <code>in-addr.arpa</code></li>
-<li>Usa registros PTR
-Ejemplo:</li>
-<li>A: <code>www.qualitypixels.net → 80.58.61.250</code></li>
-<li>PTR: <code>250.61.58.80.in-addr.arpa → www.somtic.net</code></li>
-</ul>
-<hr />
-<h2 id="servidores-maestros-y-esclavos">Servidores maestros y esclavos</h2>
-<ul>
-<li>Maestro: editable</li>
-<li>Esclavo: solo lectura, sincronizado</li>
-<li>Sincronización automática por red</li>
-</ul>
+<h2 id="14-resumen">14. Resumen</h2>
+<p>El DNS es un sistema:
+- Distribuido
+- Jerárquico
+- Basado en caché</p>
+<p>Su función principal es:</p>
+<p>Nombre de dominio → Dirección IP</p>
 
 
 
