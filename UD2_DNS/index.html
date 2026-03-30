@@ -1,0 +1,1583 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../UD1_DHCP/">
+      
+      
+        <link rel="next" href="../UD2_DNS_V2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>UD2_DNS - SMR-SERVICIOS_EN_RED</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ut2_1-servicio-dns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SMR-SERVICIOS_EN_RED" class="md-header__button md-logo" aria-label="SMR-SERVICIOS_EN_RED" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SMR-SERVICIOS_EN_RED
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD2_DNS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SMR-SERVICIOS_EN_RED" class="md-nav__button md-logo" aria-label="SMR-SERVICIOS_EN_RED" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SMR-SERVICIOS_EN_RED
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD1_DHCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1_DHCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2_DNS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2_DNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción al DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción al DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nombres-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nombres de dominio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres-de-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nombres de host
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-servidores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de servidores DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de servidores DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia del DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-basicos-de-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos básicos de DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos básicos de DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-de-datos-distribuida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base de datos distribuida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ficheros-de-zona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficheros de zona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacion-de-zonas-en-linux-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubicación de zonas en Linux (bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-zonas-en-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de zonas en bind9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido-de-un-archivo-de-zona-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido de un archivo de zona DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jerarquia-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jerarquía del DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidores-raiz-y-tld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servidores raíz y TLD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FQDN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-resolucion-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de resolución DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-de-resolucion-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de resolución DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuraciones-tipicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuraciones típicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-peticiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de peticiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de peticiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-busqueda-wwwyahoocom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo búsqueda www.yahoo.com
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-registros-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de registros DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de registros DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-y-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A y SOA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ns-y-mx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NS y MX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv-y-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SRV y CNAME
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TXT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mas-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Más tipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reenviadores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reenviadores DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icann" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ICANN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IANA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registradores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-root-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de root servers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-invertido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS invertido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidores-maestros-y-esclavos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servidores maestros y esclavos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_DNS_V2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2_DNS_V2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción al DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción al DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nombres-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nombres de dominio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombres-de-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nombres de host
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-servidores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de servidores DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de servidores DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia del DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-basicos-de-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos básicos de DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos básicos de DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-de-datos-distribuida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base de datos distribuida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ficheros-de-zona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficheros de zona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacion-de-zonas-en-linux-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubicación de zonas en Linux (bind9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-zonas-en-bind9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de zonas en bind9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido-de-un-archivo-de-zona-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido de un archivo de zona DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jerarquia-del-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jerarquía del DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidores-raiz-y-tld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servidores raíz y TLD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FQDN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-resolucion-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de resolución DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-de-resolucion-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso de resolución DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuraciones-tipicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuraciones típicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-peticiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de peticiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de peticiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-busqueda-wwwyahoocom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo búsqueda www.yahoo.com
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-registros-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de registros DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de registros DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-y-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A y SOA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ns-y-mx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NS y MX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv-y-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SRV y CNAME
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TXT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mas-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Más tipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reenviadores-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reenviadores DNS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icann" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ICANN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IANA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registradores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-de-root-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operadores de root servers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-invertido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS invertido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidores-maestros-y-esclavos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servidores maestros y esclavos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ut2_1-servicio-dns">UT2_1 – Servicio DNS</h1>
+<h2 id="introduccion-al-dns">Introducción al DNS</h2>
+<h3 id="nombres-de-dominio">Nombres de dominio</h3>
+<p>Ejemplos: <code>.org</code>, <code>.net</code>, <code>qualitypixels.net</code>, <code>google.com</code></p>
+<h3 id="nombres-de-host">Nombres de host</h3>
+<p>Ejemplos: <code>pc1</code>, <code>a112</code>, <code>impresora1</code>, etc.</p>
+<h3 id="hosts">Hosts</h3>
+<p>Un host es un ordenador, impresora, router, servidor, etc.<br />
+Cada host tiene un nombre de equipo y al menos una dirección IP.</p>
+<hr />
+<h2 id="configuracion-de-servidores-dns">Configuración de servidores DNS</h2>
+<h3 id="windows">Windows</h3>
+<div class="highlight"><pre><span></span><code>ipconfig /all
+</code></pre></div>
+<h3 id="linux">Linux</h3>
+<div class="highlight"><pre><span></span><code>cat /etc/resolv.conf
+</code></pre></div>
+<h3 id="archivo-hosts">Archivo hosts</h3>
+<p>Antes del DNS (1971–72) se usaba un fichero local <code>hosts.txt</code>.
+Ubicación:
+- Linux: <code>/etc/hosts</code>
+- Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<hr />
+<h2 id="historia-del-dns">Historia del DNS</h2>
+<ul>
+<li><strong>1971–1972</strong>: uso de <code>hosts.txt</code></li>
+<li><strong>1985</strong>: primera versión de DNS</li>
+<li><strong>Actualidad</strong>: DNS es una base de datos distribuida</li>
+</ul>
+<hr />
+<h2 id="conceptos-basicos-de-dns">Conceptos básicos de DNS</h2>
+<h3 id="base-de-datos-distribuida">Base de datos distribuida</h3>
+<p>DNS mantiene una base de datos distribuida de nombres e IPs.</p>
+<h3 id="ficheros-de-zona">Ficheros de zona</h3>
+<p>Las zonas contienen los registros DNS del dominio.</p>
+<h3 id="proceso-de-resolucion">Proceso de resolución</h3>
+<p>El servidor DNS consulta primero sus ficheros de zona.</p>
+<h3 id="ubicacion-de-zonas-en-linux-bind9">Ubicación de zonas en Linux (bind9)</h3>
+<p>Archivo: <code>/etc/bind/named.conf.local</code></p>
+<hr />
+<h2 id="configuracion-de-zonas-en-bind9">Configuración de zonas en bind9</h2>
+<p>Archivo: <code>/etc/bind/named.conf.local</code>
+Ejemplo:
+<div class="highlight"><pre><span></span><code>zone &quot;oc.se&quot; {
+  type master;
+  file &quot;/var/lib/bind/db.oc.se&quot;;
+};
+</code></pre></div>
+Archivos: <code>/var/lib/bind/</code></p>
+<hr />
+<h2 id="contenido-de-un-archivo-de-zona-dns">Contenido de un archivo de zona DNS</h2>
+<ul>
+<li><strong>SOA</strong>: registro principal de la zona</li>
+<li><strong>NS</strong>: servidores autoritativos</li>
+<li><strong>A</strong>: nombre ↔ IP</li>
+<li><strong>CNAME</strong>: alias</li>
+<li><strong>PTR</strong>: resolución inversa</li>
+</ul>
+<hr />
+<h2 id="jerarquia-del-dns">Jerarquía del DNS</h2>
+<ul>
+<li><strong>Raíz "."</strong>: gestionada por root servers</li>
+<li><strong>TLD</strong>: <code>.com</code>, <code>.edu</code>, <code>.net</code>, <code>.org</code>, <code>.es</code>...</li>
+<li><strong>Dominios y subdominios</strong>: <code>yahoo.com</code>, <code>instagram.com</code></li>
+</ul>
+<hr />
+<h2 id="servidores-raiz-y-tld">Servidores raíz y TLD</h2>
+<ol>
+<li>Root servers → conocen a los TLD</li>
+<li>Servidores TLD → conocen servidores autoritativos</li>
+<li>Lista: https://www.iana.org/domains/root/db</li>
+</ol>
+<hr />
+<h2 id="fqdn">FQDN</h2>
+<p>Ejemplos:
+- <code>www.yahoo.com.</code>
+- <code>mail.google.com.</code>
+- <code>smtp.severoochoa.com.</code></p>
+<hr />
+<h2 id="ejemplo-de-resolucion-dns">Ejemplo de resolución DNS</h2>
+<ol>
+<li>Root servers indican TLD <code>.com</code></li>
+<li>TLD <code>.com</code> indica servidor autoritativo</li>
+<li>Autoritativo devuelve la IP</li>
+</ol>
+<hr />
+<h2 id="proceso-de-resolucion-dns">Proceso de resolución DNS</h2>
+<ul>
+<li>Cliente DNS: mantiene caché</li>
+<li>Servidor DNS local: búsqueda recursiva</li>
+<li>Root &amp; TLD: indican servidores autoritativos</li>
+<li>Autoritativo: respuesta final</li>
+</ul>
+<hr />
+<h2 id="configuraciones-tipicas">Configuraciones típicas</h2>
+<ol>
+<li>DNS del mismo dominio</li>
+<li>DNS del ISP</li>
+<li>DNS como caché</li>
+</ol>
+<hr />
+<h2 id="tipos-de-peticiones">Tipos de peticiones</h2>
+<h3 id="recursivas">Recursivas</h3>
+<p>El cliente pide resolución completa.</p>
+<h3 id="iterativas">Iterativas</h3>
+<p>El servidor da info parcial o delega.</p>
+<hr />
+<h2 id="ejemplo-busqueda-wwwyahoocom">Ejemplo búsqueda www.yahoo.com</h2>
+<ol>
+<li>Cliente consulta caché</li>
+<li>DNS ISP consulta root</li>
+<li>Root indica <code>.com</code></li>
+<li><code>.com</code> indica autoritativo</li>
+<li>Autoritativo da IP</li>
+<li>Caché se actualiza</li>
+</ol>
+<hr />
+<h2 id="tipos-de-registros-dns">Tipos de registros DNS</h2>
+<h3 id="a-y-soa">A y SOA</h3>
+<ul>
+<li>A: nombre ↔ IP</li>
+<li>AAAA: IPv6</li>
+<li>SOA: parámetros de zona</li>
+</ul>
+<h3 id="ns-y-mx">NS y MX</h3>
+<ul>
+<li>NS: servidor autoritativo</li>
+<li>MX: servidor de correo</li>
+</ul>
+<h3 id="srv-y-cname">SRV y CNAME</h3>
+<ul>
+<li>SRV: servicios y puertos</li>
+<li>CNAME: alias</li>
+</ul>
+<h3 id="txt">TXT</h3>
+<ul>
+<li>Texto asociado al dominio</li>
+<li>Verificaciones</li>
+<li>Ejemplo: google-site-verification</li>
+</ul>
+<h3 id="mas-tipos">Más tipos</h3>
+<p>https://es.wikipedia.org/wiki/Anexo:Tipos_de_registros_DNS</p>
+<hr />
+<h2 id="reenviadores-dns">Reenviadores DNS</h2>
+<ul>
+<li>Reenvían consultas externas</li>
+<li>Mantienen caché</li>
+<li>Pueden ser autoridad local</li>
+</ul>
+<hr />
+<h2 id="icann">ICANN</h2>
+<ul>
+<li>Organización sin ánimo de lucro</li>
+<li>Gestiona IPs, identificadores, DNS, root servers</li>
+<li>Acredita registradores</li>
+</ul>
+<hr />
+<h2 id="iana">IANA</h2>
+<ul>
+<li>Mantiene zonas raíz</li>
+<li>Asigna espacio de nombres</li>
+<li>Supervisa operaciones DNS</li>
+</ul>
+<hr />
+<h2 id="registradores">Registradores</h2>
+<ul>
+<li>Actualizan info en servidores TLD</li>
+<li>Acreditados por ICANN</li>
+</ul>
+<hr />
+<h2 id="operadores-de-root-servers">Operadores de root servers</h2>
+<ul>
+<li>12 operadores</li>
+<li>13 root servers</li>
+<li>Info: https://root-servers.org/</li>
+</ul>
+<hr />
+<h2 id="dns-invertido">DNS invertido</h2>
+<ul>
+<li>Usa dominio <code>in-addr.arpa</code></li>
+<li>Usa registros PTR
+Ejemplo:</li>
+<li>A: <code>www.qualitypixels.net → 80.58.61.250</code></li>
+<li>PTR: <code>250.61.58.80.in-addr.arpa → www.somtic.net</code></li>
+</ul>
+<hr />
+<h2 id="servidores-maestros-y-esclavos">Servidores maestros y esclavos</h2>
+<ul>
+<li>Maestro: editable</li>
+<li>Esclavo: solo lectura, sincronizado</li>
+<li>Sincronización automática por red</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
